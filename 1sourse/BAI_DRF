@@ -1,0 +1,72 @@
+from tkinter import *
+from tkinter import ttk
+from PIL import ImageTk, Image
+import webbrowser
+def button_book2():
+    global clicks
+    openbook2()
+    
+def button_1():
+    global clicks
+    webbrowser.open('https://www.youtube.com/watch?v=wuJIqmha2Hk&list=TLPQMTkwNDIwMjRjdK68IzHbcw&index=1', new=2)
+    btn
+def button_2():
+    global clicks
+    webbrowser.open('https://g.co/kgs/JqnCPgd', new=2)
+
+def button_3():
+    global clicks
+    webbrowser.open('https://www.reddit.com/', new=2)
+    btn
+def button_4():
+    global clicks
+    webbrowser.open('https://discord.com/', new=2)
+
+
+
+def openbook1():
+    root = Tk()
+    root.title("B")
+    root.geometry("450x300")
+    root.title("ПpNвеt я B.A.I.! ")
+    frm = ttk.Frame(borderwidth=1, relief=SOLID, height=450, width=300)
+    btn = ttk.Button(frm,text="Привет, Bai. Включи музыку.", command=button_1)
+    btn.pack(anchor="s")
+    btn.pack(fill=X)
+    btn.pack(expand=True)
+    btn = ttk.Button(frm,text="Привет, Bai. Открой змейку", command=button_2)
+    btn.pack(anchor="s")
+    btn.pack(fill=X)
+    btn.pack(expand=True)
+    btn = ttk.Button(frm,text="Перейти к DRF->", command=button_book2)
+    btn.pack(anchor="s")
+    btn.pack(fill=X)
+    btn.pack(expand=True)
+    frm.pack(anchor="s", fill=X, padx=5, pady=5, side=BOTTOM)
+    BAI = ImageTk.PhotoImage(Image.open("BAI.png"))
+    Bai = Label(root,image = BAI)
+    Bai.pack(side=LEFT)
+    root.mainloop()
+
+def openbook2():
+    rot = Tk()
+    rot.title("B")
+    rot.geometry("450x300")
+    rot.title("ПpNвеt я D.R.F.! ")
+    frm = ttk.Frame(borderwidth=1, relief=SOLID, height=450, width=300)
+    btn = ttk.Button(frm,text="Привет, Drf. Открой реддит.", command=button_3)
+    btn.pack(anchor="s")
+    btn.pack(fill=X)
+    btn.pack(expand=True)
+    btn = ttk.Button(frm,text="Привет, Drf. Включи Дискорд.", command=button_4)
+    btn.pack(anchor="s")
+    btn.pack(fill=X)
+    btn.pack(expand=True)
+    frm.pack(anchor="s", fill=X, padx=5, pady=5, side=BOTTOM)
+    DRF = ImageTk.PhotoImage(Image.open("DRF.png"))
+    Drf = Label(rot,image = DRF)
+    Drf.pack(side=LEFT)
+    rot.mainloop()
+    
+openbook1()
+
